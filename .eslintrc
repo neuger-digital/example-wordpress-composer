@@ -1,0 +1,15 @@
+{
+  "extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jquery": true
+  },
+  "rules": {
+    "no-console": "off",
+    "no-undef": 1,
+    "no-unused-vars": 1,
+    "prefer-const": 1,
+    "prettier/prettier": 1
+  }
+}
