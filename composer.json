@@ -84,11 +84,13 @@
     ],
     "post-install-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
+      "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
     ],
     "post-update-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
+      "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
     ],
     "post-create-project-cmd": [
       "@cleanup",
