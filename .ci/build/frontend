@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eo pipefail
+
+#
+# This script runs static tests which
+# can be performed without code execution.
+#
+
+# Run npm install
+cd ./web/lib/
+npm run build
