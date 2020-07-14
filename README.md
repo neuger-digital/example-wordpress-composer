@@ -1,6 +1,6 @@
 # Example WordPress Composer
 
-[![CircleCI](https://circleci.com/gh/neuger-digital/wordpress-composer.svg?style=svg)](https://circleci.com/gh/neuger-digital/example-wordpress-composer)
+[![CircleCI](https://circleci.com/gh/neuger-digital/wordpress-composer.svg?style=svg&circle-token=8f0e743c6bae3977e63be4accfa103e878265064)](https://circleci.com/gh/neuger-digital/example-wordpress-composer)
 
 This repository is a reference implementation and start state for a modern WordPress workflow utilizing [Composer](https://getcomposer.org/), Continuous Integration (CI), Automated Testing, and Pantheon. Even though this is a good starting point, you will need to customize and maintain the CI/testing set up for your projects.
 
