@@ -1,6 +1,6 @@
 # Example WordPress Composer
 
-[![CircleCI](https://circleci.com/gh/neuger-digital/example-wordpress-composer.svg?style=svg)](https://circleci.com/gh/neuger-digital/example-wordpress-composer)
+[![CircleCI](https://circleci.com/gh/neuger-digital/wordpress-composer.svg?style=svg)](https://circleci.com/gh/neuger-digital/example-wordpress-composer)
 
 This repository is a reference implementation and start state for a modern WordPress workflow utilizing [Composer](https://getcomposer.org/), Continuous Integration (CI), Automated Testing, and Pantheon. Even though this is a good starting point, you will need to customize and maintain the CI/testing set up for your projects.
 
@@ -28,8 +28,8 @@ NOTE: Each instance of 'site-name' should be your project's namespace that's con
 
 ### Setting up a New Site
 * Make sure [Terminus Build Tools](https://github.com/pantheon-systems/terminus-build-tools-plugin#installation) is installed on your local machine
-* Run `terminus build:project:create --team='Neuger Communications Group' neuger-digital/example-wordpress-composer site-name`
-* In that directory run`git clone git@github.com:neuger-digital/example-wordpress-composer.git`
+* Run `terminus build:project:create --team='Neuger Communications Group' neuger-digital/wordpress-composer site-name`
+* In that directory run`git clone git@github.com:neuger-digital/wordpress-composer.git`
 * Follow the instructions for 'setting up an existing site'
 
 ### Setting up an Existing Site
@@ -76,7 +76,7 @@ See `/web/wp-config.php` for key settings, such as `WP_SITEURL`, which must be u
 ### `composer.json`
 This project uses Composer to manage third-party PHP dependencies.
 
-The `require` section of `composer.json` should be used for any dependencies your web project needs, even those that might only be used on non-Live environments. All dependencies in `require` will be pushed to Pantheon. 
+The `require` section of `composer.json` should be used for any dependencies your web project needs, even those that might only be used on non-Live environments. All dependencies in `require` will be pushed to Pantheon.
 
 The `require-dev` section should be used for dependencies that are not a part of the web application but are necesarry to build or test the project. Some example are `php_codesniffer` and `phpunit`. Dev dependencies will not be deployed to Pantheon.
 
