@@ -94,6 +94,12 @@
       "@cleanup",
       "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
     ],
+    "code-sniff": [
+      "./vendor/bin/phpcs --standard=WordPress ./web/wp-content"
+    ],
+    "unit-test": [
+      "./vendor/bin/phpunit tests/unit/*"
+    ],
     "lint": "find web/wp-content -name '*.php' -exec php -l {} \\;"
   }
 }
