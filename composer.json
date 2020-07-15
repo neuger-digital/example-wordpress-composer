@@ -20,7 +20,7 @@
   "require": {
     "php": ">=7.2",
     "composer/installers": "^1.4.0",
-    "neuger-digital/example-wordpress-composer": "@dev",
+    "neuger-digital/example-wordpress-composer": "*",
     "pantheon-systems/wordpress-composer": "*",
     "wpackagist-plugin/wp-migrate-db": "^1.0.13",
     "roots/wp-password-bcrypt": "^1.0.0",
