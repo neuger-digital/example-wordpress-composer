@@ -1,5 +1,5 @@
 {
-  "name": "neuger-digital/wordpress-composer",
+  "name": "neuger-digital/example-wordpress-composer",
   "description": "",
   "type": "project",
   "keywords": [],
@@ -9,6 +9,10 @@
       "url": "https://wpackagist.org"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/pantheon-systems/wordpress-composer"
+    },
+    {
      "type":"vcs",
      "url":"https://github.com/junaidbhura/composer-wp-pro-plugins"
     }
@@ -16,6 +20,7 @@
   "require": {
     "php": ">=7.2",
     "composer/installers": "^1.4.0",
+    "pantheon-systems/wordpress-composer": "*",
     "wpackagist-plugin/wp-migrate-db": "^1.0.13",
     "roots/wp-password-bcrypt": "^1.0.0",
     "rvtraveller/qs-composer-installer": "^1.1",
