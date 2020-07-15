@@ -28,8 +28,8 @@ NOTE: Each instance of 'site-name' should be your project's namespace that's con
 
 ### Setting up a New Site
 * Make sure [Terminus Build Tools](https://github.com/pantheon-systems/terminus-build-tools-plugin#installation) is installed on your local machine
-* Run `terminus build:project:create --team='Neuger Communications Group' neuger-digital/wordpress-composer site-name`
-* In that directory run`git clone git@github.com:neuger-digital/wordpress-composer.git`
+* Run `terminus build:project:create --team='Neuger Communications Group' pantheon-systems/wordpress-composer site-name`
+* In that directory run`git clone git@github.com:neuger-digital/site-name.git`
 * Follow the instructions for 'setting up an existing site'
 
 ### Setting up an Existing Site
