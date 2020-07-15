@@ -3,7 +3,7 @@
 defaults: &defaults
   docker:
     - image: quay.io/pantheon-public/build-tools-ci:6.x
-  working_directory: ~/example-wordpress-composer
+  working_directory: ~/wordpress-composer
   environment:
     #=========================================================================
     # In addition to the environment variables defined in this file, also
@@ -20,7 +20,7 @@ defaults: &defaults
     # ADMIN_PASSWORD: The admin password to use when installing.
     # ADMIN_EMAIL:  The email address to give the admin when installing.
     #=========================================================================
-    TZ: "/usr/share/zoneinfo/America/Los_Angeles"
+    TZ: "/usr/share/zoneinfo/America/Chicago"
   
     # The variables below usually do not need to be modified.
   
@@ -68,8 +68,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - example-wordpress-composer-composer-cache-{{ checksum "composer.lock" }}
-            - example-wordpress-composer-composer-cache-
+            - wordpress-composer-composer-cache-{{ checksum "composer.lock" }}
+            - wordpress-composer-composer-cache-
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
@@ -82,7 +82,7 @@ jobs:
           command: ./.ci/test/static/run
 
       - save_cache:
-          key: example-wordpress-composer-composer-cache-{{ checksum "composer.lock" }}
+          key: wordpress-composer-composer-cache-{{ checksum "composer.lock" }}
           paths:
             - ./
 
@@ -93,8 +93,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - example-wordpress-composer-vendor-{{ checksum "composer.lock" }}
-            - example-wordpress-composer-vendor-
+            - wordpress-composer-vendor-{{ checksum "composer.lock" }}
+            - wordpress-composer-vendor-
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
@@ -107,7 +107,7 @@ jobs:
           command: ./.ci/build/php
 
       - save_cache:
-          key: example-wordpress-composer-vendor-{{ checksum "composer.lock" }}
+          key: wordpress-composer-vendor-{{ checksum "composer.lock" }}
           paths:
             - ./vendor
 
@@ -123,14 +123,14 @@ jobs:
       - checkout
 
       - restore_cache:
-         key: example-wordpress-composer-dependency-cache-{{ .Environment.CIRCLE_SHA1 }}
+         key: wordpress-composer-dependency-cache-{{ .Environment.CIRCLE_SHA1 }}
 
       - run:
           name: npm-install
           command: 'cd ./web/lib/ && npm ci'
 
       - save_cache:
-         key: example-wordpress-composer-dependency-cache-{{ .Environment.CIRCLE_SHA1 }}
+         key: wordpress-composer-dependency-cache-{{ .Environment.CIRCLE_SHA1 }}
          paths:
            - ./web/lib/
 
