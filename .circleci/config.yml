@@ -202,13 +202,13 @@ workflows:
       #      - build_php
       #      - build_frontend
 
-  scheduled_update_check:
-    triggers:
-       - schedule:
-           cron: "0 0 * * *"
-           filters:
-             branches:
-              only:
-                - master
-    jobs:
-      - composer_lock_updater
+#   scheduled_update_check:
+#     triggers:
+#        - schedule:
+#            cron: "0 0 * * *"
+#            filters:
+#              branches:
+#               only:
+#                 - master
+#     jobs:
+#       - composer_lock_updater
